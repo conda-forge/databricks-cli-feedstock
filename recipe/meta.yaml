@@ -1,13 +1,13 @@
 {% set name = "databricks-cli" %}
-{% set version = "0.9.1" %}
+{% set version = "0.12.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ebf123b5567c06b7583688077120ead075ca06938b9995d4acafa97863ed8ff
+  sha256: a1489ef893cd96ab784d7f5c0764a02bc20ea213a798f640b1004a1018122f36
 
 build:
   number: 0
@@ -15,7 +15,7 @@ build:
     - databricks=databricks_cli.cli:cli
     - dbfs=databricks_cli.dbfs.cli:dbfs_group
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
