@@ -119,4 +119,5 @@ Feedstock Maintainers
 
 * [@andrewmchen](https://github.com/andrewmchen/)
 * [@jaroslawk](https://github.com/jaroslawk/)
+* [@oblute](https://github.com/oblute/)
 
