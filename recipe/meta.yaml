@@ -1,5 +1,5 @@
 {% set name = "databricks-cli" %}
-{% set version = "0.12.1" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5114f37f58c7d539153120a00a1901110752ac7c3a1ca4c6ec0584b979c85410
+  sha256: 4afa17da73c6e93ca09c5fdf24fa3552965854bbbc3f1428cf4d27edb751b72c
 
 build:
   number: 0
@@ -23,38 +23,42 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - click >=6.7
+    - click >=7.0
     - configparser >=0.3.5
+    - oauthlib >=3.1.0
     - python >=3.6
+    - pyjwt >=1.7.0
     - requests >=2.17.3
     - six >=1.10.0
     - tabulate >=0.7.7
-    - tenacity
 
 test:
   imports:
     - databricks_cli
+    - databricks_cli.cluster_policies
     - databricks_cli.clusters
     - databricks_cli.configure
     - databricks_cli.dbfs
     - databricks_cli.groups
     - databricks_cli.jobs
     - databricks_cli.libraries
+    - databricks_cli.oauth
+    - databricks_cli.pipelines
+    - databricks_cli.repos
     - databricks_cli.runs
     - databricks_cli.sdk
     - databricks_cli.secrets
     - databricks_cli.stack
+    - databricks_cli.tokens
+    - databricks_cli.unity_catalog
     - databricks_cli.workspace
-    - integration
-    - integration.dbfs
-    - integration.workspace
   commands:
     - databricks --help
     - dbfs --help
 
 about:
   home: https://github.com/databricks/databricks-cli
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: A command line interface for Databricks
