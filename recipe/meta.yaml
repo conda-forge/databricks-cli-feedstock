@@ -23,31 +23,34 @@ requirements:
     - python >=3.6
     - setuptools
   run:
-    - click >=6.7
+    - click >=7.0
     - configparser >=0.3.5
+    - oauthlib >=3.1.0
     - python >=3.6
+    - pyjwt >=1.7.0
     - requests >=2.17.3
     - six >=1.10.0
-    - tabulate >=0.7.7
-    - tenacity
 
 test:
   imports:
     - databricks_cli
+    - databricks_cli.cluster_policies
     - databricks_cli.clusters
     - databricks_cli.configure
     - databricks_cli.dbfs
     - databricks_cli.groups
     - databricks_cli.jobs
     - databricks_cli.libraries
+    - databricks_cli.oauth
+    - databricks_cli.pipelines
+    - databricks_cli.repos
     - databricks_cli.runs
     - databricks_cli.sdk
     - databricks_cli.secrets
     - databricks_cli.stack
+    - databricks_cli.tokens
+    - databricks_cli.unity_catalog
     - databricks_cli.workspace
-    - integration
-    - integration.dbfs
-    - integration.workspace
   commands:
     - databricks --help
     - dbfs --help
