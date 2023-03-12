@@ -1,11 +1,11 @@
-About databricks-cli
-====================
+About databricks-cli-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databricks-cli-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/databricks/databricks-cli
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databricks-cli-feedstock/blob/main/LICENSE.txt)
 
 Summary: A command line interface for Databricks
 
