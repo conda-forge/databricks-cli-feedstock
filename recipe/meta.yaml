@@ -1,5 +1,5 @@
 {% set name = "databricks-cli" %}
-{% set version = "0.17.6" %}
+{% set version = "0.17.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7fea8b4e47ac38bd4eaad8a76e38a6916419df930ad1c615a6b43feb427672c4
+  sha256: 5a545063449f3b9ad904644c0f251058485e29e564dedf8d4e4a7b45caf9549b
 
 build:
   number: 0
