@@ -33,7 +33,7 @@ test:
 about:
   summary: A command line interface for Databricks
   home: https://github.com/databricks/cli
-  license: Databricks-License
+  license: LicenseRef-Databricks-License
   license_file:
     - LICENSE
     - NOTICE
