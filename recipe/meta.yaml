@@ -22,7 +22,8 @@ build:
       -ldflags "-X github.com/databricks/cli/internal/build.buildVersion={{ version }}" \
       -o "${PREFIX}/bin/databricks"
     # save thirdparty licenses
-    go-licenses save . --save_path ./thirdparty 
+    go-licenses save . --save_path ./thirdparty --ignore github.com/databricks/cli
+    ls -la ./thirdparty
     # Clear out cache to avoid file not removable warnings
     chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)
 
