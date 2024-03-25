@@ -12,8 +12,8 @@ source:
 build:
   number: 0
   script_env:
-    - INSTALL_DIR={{ PREFIX }}/bin   # [not win]
-    - INSTALL_DIR={{ LIBRARY_BIN }}  # [win]
+    - BINARY_FILEPATH={{ PREFIX }}/bin/databricks      # [not win]
+    - BINARY_FILEPATH={{ PREFIX }}/bin/databricks.exe  # [win]
 
 requirements:
   build:
