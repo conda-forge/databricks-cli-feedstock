@@ -1,3 +1,5 @@
+@echo on
+
 copy "%RECIPE_DIR%\build.sh" .
 
 set PREFIX=%PREFIX:\=/%
