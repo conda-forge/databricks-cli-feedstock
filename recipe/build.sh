@@ -4,11 +4,13 @@ set -exuo pipefail
 
 export CGO_ENABLED=0
 
+echo "PKG_VERSION = ${PKG_VERSION}"
+
 go mod vendor
 go build \
     -trimpath \
     -mod vendor \
-    -ldflags "-X github.com/databricks/cli/internal/build.buildVersion={{ version }}" \
+    -ldflags "-X github.com/databricks/cli/internal/build.buildVersion=${PKG_VERSION}" \
     -o "${PREFIX}/bin/databricks"
 
 
