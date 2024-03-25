@@ -17,12 +17,13 @@ requirements:
     - {{ compiler('go') }}
     - go-licenses
     - posix                  # [win]
-    - tree
 
 test:
+  requires:
+    - ripgrep
   commands:
     - databricks --help
-    - databricks --version | grep {{ version }}
+    - databricks --version | rg {{ version }}
 
 about:
   summary: A command line interface for Databricks

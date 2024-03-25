@@ -17,8 +17,5 @@ go build \
 # save thirdparty licenses
 go-licenses save . --save_path ./thirdparty --ignore github.com/databricks/cli
 
-tree -d ./thirdparty
-
-
 # Clear out cache to avoid file not removable warnings
 chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)
