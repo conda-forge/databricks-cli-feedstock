@@ -1,72 +1,41 @@
 {% set name = "databricks-cli" %}
-{% set version = "0.18.0" %}
+{% set version = "0.215.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 87569709eda9af3e9db8047b691e420b5e980c62ef01675575c0d2b9b4211eb7
+  url: https://github.com/databricks/cli/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: f84c554145c7ac9dee3ff0ca7dd39367a415ca7eb4d6a110fa7fc1c21e2cc282
 
 build:
   number: 0
-  entry_points:
-    - databricks=databricks_cli.cli:cli
-    - dbfs=databricks_cli.dbfs.cli:dbfs_group
-  noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  script_env:
+    - BINARY_FILEPATH={{ PREFIX }}/bin/databricks      # [not win]
+    - BINARY_FILEPATH={{ PREFIX }}/bin/databricks.exe  # [win]
 
 requirements:
-  host:
-    - pip
-    - python >=3.7
-    - setuptools
-  run:
-    - click >=7.0
-    - configparser >=0.3.5
-    - oauthlib >=3.1.0
-    - python >=3.7
-    - pyjwt >=1.7.0
-    - requests >=2.17.3
-    - six >=1.10.0
-    - tabulate >=0.7.7
-    - urllib3 >=1.26.7,<3
+  build:
+    - {{ compiler('go') }}
+    - go-licenses
+    - posix                  # [win]
 
 test:
   requires:
-    - pip
-  imports:
-    - databricks_cli
-    - databricks_cli.cluster_policies
-    - databricks_cli.clusters
-    - databricks_cli.configure
-    - databricks_cli.dbfs
-    - databricks_cli.groups
-    - databricks_cli.jobs
-    - databricks_cli.libraries
-    - databricks_cli.oauth
-    - databricks_cli.pipelines
-    - databricks_cli.repos
-    - databricks_cli.runs
-    - databricks_cli.sdk
-    - databricks_cli.secrets
-    - databricks_cli.stack
-    - databricks_cli.tokens
-    - databricks_cli.unity_catalog
-    - databricks_cli.workspace
+    - ripgrep
   commands:
     - databricks --help
-    - dbfs --help
-    - pip check
+    - databricks --version | rg {{ version }}
 
 about:
-  home: https://github.com/databricks/databricks-cli
-  license: Apache-2.0
-  license_family: APACHE
-  license_file: LICENSE
   summary: A command line interface for Databricks
-  dev_url: https://github.com/databricks/databricks-cli
+  home: https://github.com/databricks/cli
+  license: LicenseRef-Databricks-License
+  license_file:
+    - LICENSE
+    - NOTICE
+    - thirdparty/
 
 extra:
   recipe-maintainers:
@@ -74,3 +43,4 @@ extra:
     - andrewmchen
     - jaroslawk
     - oblute
+    - dhirschfeld
