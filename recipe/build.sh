@@ -11,7 +11,7 @@ go build \
     -trimpath \
     -mod vendor \
     -ldflags "-X github.com/databricks/cli/internal/build.buildVersion=${PKG_VERSION}" \
-    -o "${PREFIX}/bin/databricks"
+    -o "${INSTALL_DIR}/databricks"
 
 
 # save thirdparty licenses
