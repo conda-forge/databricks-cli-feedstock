@@ -31,13 +31,12 @@ test:
     - databricks --version | grep {{ version }}
 
 about:
+  summary: A command line interface for Databricks
   home: https://github.com/databricks/cli
   license: Databricks-License
   license_file:
     - LICENSE
     - NOTICE
-  summary: A command line interface for Databricks
-  dev_url: https://github.com/databricks/databricks-cli
 
 extra:
   recipe-maintainers:
@@ -45,3 +44,4 @@ extra:
     - andrewmchen
     - jaroslawk
     - oblute
+    - dhirschfeld
