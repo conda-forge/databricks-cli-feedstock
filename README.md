@@ -3,23 +3,40 @@ About databricks-cli-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/databricks-cli-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/databricks/databricks-cli
+Home: https://github.com/databricks/cli
 
-Package license: Apache-2.0
+Package license: Databricks-License
 
 Summary: A command line interface for Databricks
-
-Development: https://github.com/databricks/databricks-cli
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6535&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databricks-cli-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6535&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databricks-cli-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6535&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/databricks-cli-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -97,7 +114,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -146,6 +163,7 @@ Feedstock Maintainers
 =====================
 
 * [@andrewmchen](https://github.com/andrewmchen/)
+* [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@jaroslawk](https://github.com/jaroslawk/)
 * [@oblute](https://github.com/oblute/)
 * [@thewchan](https://github.com/thewchan/)
