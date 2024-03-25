@@ -21,6 +21,8 @@ build:
       -mod vendor \
       -ldflags "-X github.com/databricks/cli/internal/build.buildVersion={{ version }}" \
       -o "${PREFIX}/bin/databricks"
+    # save thirdparty licenses
+    go-licenses save . --save_path ./thirdparty 
     # Clear out cache to avoid file not removable warnings
     chmod -R u+w $(go env GOPATH) && rm -r $(go env GOPATH)
 
@@ -41,6 +43,7 @@ about:
   license_file:
     - LICENSE
     - NOTICE
+    - thirdparty/
 
 extra:
   recipe-maintainers:
