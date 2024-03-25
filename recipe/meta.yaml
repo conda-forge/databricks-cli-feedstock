@@ -16,6 +16,7 @@ requirements:
   build:
     - {{ compiler('go') }}
     - go-licenses
+    - posix                  # [win]
     - tree
 
 test:
