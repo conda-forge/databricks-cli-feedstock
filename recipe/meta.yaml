@@ -1,5 +1,5 @@
 {% set name = "databricks-cli" %}
-{% set version = "0.219.0" %}
+{% set version = "0.220.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/databricks/cli/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d9a4b1fdf4bb22ef15e2fc8c1fe24c909150c1881f14fd11455f652342a80c38
+  sha256: d8982359d68d045e06bf194e9716ce08c0dbdd8a07a3c0270eb2406c82e16c3a
 
 build:
   number: 0
