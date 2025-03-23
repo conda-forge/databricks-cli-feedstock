@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }}
+    - {{ compiler('go') }} >=1.24.1
     - go-licenses
     - posix                  # [win]
 
