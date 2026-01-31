@@ -18,7 +18,7 @@ go build \
 go-licenses save . --save_path ./thirdparty --ignore github.com/databricks/cli --ignore github.com/mattn/go-localereader
 
 # FIXME: go-localreader caused go-licenses to fail, only on Windows
-tree .
+eza -ahloTL3 --git-ignore .
 curl -fsSL -o ./thirdparty/mattn-go-localereader.txt https://raw.githubusercontent.com/mattn/go-localereader/refs/heads/master/LICENSE
 
 # Clear out cache to avoid file not removable warnings
