@@ -10,7 +10,7 @@ source:
   sha256: f6d3035c581c2544aef1e1288d8a9a2cf85c22040cd645ed0bc8f50741e240fa
 
 build:
-  number: 1
+  number: 0
   script_env:
     - BINARY_FILEPATH={{ PREFIX }}/bin/databricks      # [not win]
     - BINARY_FILEPATH={{ PREFIX }}/bin/databricks.exe  # [win]
