@@ -10,6 +10,7 @@ set CHERE_INVOKING=1
 
 
 bash -lc "./build.sh"
+bash -lc "go-licenses save . --save_path ../library_licenses --ignore github.com/mattn/go-localereader"
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 exit /b 0
