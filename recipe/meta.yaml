@@ -40,6 +40,7 @@ about:
     - LICENSE
     - NOTICE
     - thirdparty/
+    - LICENSE-go-localereader
 
 extra:
   recipe-maintainers:
