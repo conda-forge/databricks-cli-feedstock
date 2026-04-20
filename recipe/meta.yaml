@@ -10,7 +10,7 @@ source:
     sha256: d4febd12aac44e163a4148d2acf18c7e18b9dd6e6a22ffa290260ffc50153dc5
   - url: https://raw.githubusercontent.com/mattn/go-localereader/refs/heads/master/LICENSE  # [win]
     sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3    # [win]
-    file_name: LICENSE-go-localereader    # [win]
+    fn: LICENSE-go-localereader    # [win]
 
 
 build:
