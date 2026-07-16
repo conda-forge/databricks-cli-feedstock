@@ -32,7 +32,7 @@ test:
     - databricks --help
     - databricks --version | rg {{ version }}
     # semver metadata must be stamped, not the 0.0.0 dev-build defaults
-    - databricks version --output json | rg "Major.: {{ version.split('.')[0] }},"
+    - 'databricks version --output json | rg "Major.: {{ version.split(".")[0] }},"'
     - databricks version --output json | rg v{{ version }}
 
 about:
