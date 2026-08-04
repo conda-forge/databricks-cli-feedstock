@@ -14,7 +14,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   script_env:
     - BINARY_FILEPATH={{ PREFIX }}/bin/databricks      # [not win]
     - BINARY_FILEPATH={{ PREFIX }}/bin/databricks.exe  # [win]
@@ -31,6 +31,9 @@ test:
   commands:
     - databricks --help
     - databricks --version | rg {{ version }}
+    # semver metadata must be stamped, not the 0.0.0 dev-build defaults
+    - 'databricks version --output json | rg "Major.: {{ version.split(".")[0] }},"'
+    - databricks version --output json | rg v{{ version }}
 
 about:
   summary: A command line interface for Databricks
