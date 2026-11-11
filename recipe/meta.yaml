@@ -1,5 +1,5 @@
 {% set name = "databricks-cli" %}
-{% set version = "1.25.0" %}
+{% set version = "1.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/databricks/cli/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: df05e80365aac5eed9d1c2cca9b745f240dfd3d24ce5426cbec6e3f7dbf73411
+    sha256: fa3cb108e38fc8b749c40c56a56b55d68b74f0bc561eee2ef1397e1dd3449c03
   - url: https://raw.githubusercontent.com/mattn/go-localereader/refs/heads/master/LICENSE  # [win]
     sha256: dceede03550621e65ec7b79fcba87cf6dbb9d31132a8ae71a8fe8ceec0af7da3  # [win]
     fn: LICENSE-go-localereader  # [win]
